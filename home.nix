@@ -9,7 +9,12 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      nrs = "sudo nixos-rebuild --flake /etc/nixos#haiminh256";
+      nrs = "sudo nixos-rebuild switch --flake /etc/nixos#haiminh256";
+      ncl = "sudo nix-collect-garbage -d";
+      nix-install = "sudo nix profile install";
+      nix-remove = "sudo nix profile remove";
+      nix-clean = "sudo nix store gc";
+      nix-list = "sudo nix profile list";
     };
     initExtra = ''
 	PS1='\[\e[1;32m\]\u@\h \[\e[1;34m\]\w\[\e[0m\] \$ '

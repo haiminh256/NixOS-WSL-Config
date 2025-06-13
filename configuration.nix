@@ -33,7 +33,6 @@
     neovim
     git
   ];
-
   system.stateVersion = "24.11";
 }
 
